@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deluxe Windows & Doors NJ - Garfield, NJ 07026 | Premium Window Installation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --mint: #00ffcc;
+      --mint-light: #33ffd6;
+      --mint-dim: #00d4aa;
+      --mint-pale: #e6fff9;
+      --mint-mid: #b3fff0;
+      --dark: #020f0d;
+      --darkgreen: #031a15;
+      --midgreen: #052e24;
+      --slate: #08473a;
+      --text-dark: #042018;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Playfair Display', serif; background: var(--mint-pale); color: var(--text-dark); }
+    h1,h2,h3,h4 { font-family: 'Playfair Display', serif; letter-spacing: .01em; }
+
+    /* Hero */
+    .hero-bg {
+      background: linear-gradient(135deg, rgba(2,15,13,0.94) 0%, rgba(5,46,36,0.86) 100%),
+        url('https://deluxewindows-nj.com/wp-content/uploads/2016/05/home-banner-1.jpg') center/cover no-repeat;
+      background-attachment: fixed;
+    }
+
+    /* Animation */
+    .fade-up { animation: mintFade 1.2s ease forwards; opacity:0; }
+    @keyframes mintFade {
+      from { opacity:0; transform:translateY(32px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+
+    /* Mint rule */
+    .mint-rule::before {
+      content:'';
+      display:block;
+      width:60px; height:4px;
+      border-radius:2px;
+      background: linear-gradient(90deg, var(--mint), var(--mint-light));
+      margin: 0 auto 18px;
+      box-shadow: 0 0 14px rgba(0,255,204,0.45);
+    }
+
+    /* Buttons */
+    .btn-mint {
+      background: var(--mint);
+      color: var(--dark);
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: .04em;
+      padding: 14px 36px;
+      border-radius: 8px;
+      display: inline-block;
+      transition: background .2s, transform .2s, box-shadow .2s;
+      box-shadow: 0 4px 22px rgba(0,255,204,0.35);
+    }
+    .btn-mint:hover { background: var(--mint-light); transform: translateY(-2px); box-shadow: 0 6px 30px rgba(0,255,204,0.5); }
+
+    .btn-outline-mint {
+      border: 2px solid var(--mint);
+      color: var(--mint);
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 12px 34px;
+      border-radius: 8px;
+      display: inline-block;
+      transition: all .2s;
+    }
+    .btn-outline-mint:hover { background: var(--mint); color: var(--dark); }
+
+    .btn-dark {
+      background: var(--dark);
+      color: var(--mint);
+      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 1rem;
+      padding: 14px 36px;
+      border-radius: 8px;
+      display: inline-block;
+      transition: all .2s;
+    }
+    .btn-dark:hover { background: var(--darkgreen); }
+
+    .btn-outline-white {
+      border: 2px solid rgba(255,255,255,0.6);
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 12px 34px;
+      border-radius: 8px;
+      display: inline-block;
+      transition: all .2s;
+    }
+    .btn-outline-white:hover { background: rgba(255,255,255,0.1); }
+
+    /* Nav */
+    nav a.nl { position: relative; }
+    nav a.nl::after {
+      content:''; position:absolute; bottom:-3px; left:0;
+      width:0; height:2px;
+      background: var(--mint);
+      box-shadow: 0 0 6px var(--mint);
+      transition: width .3s;
+    }
+    nav a.nl:hover::after { width:100%; }
+
+    /* Sections */
+    .sec-pale   { background: var(--mint-pale); }
+    .sec-mid    { background: var(--mint-mid); }
+    .sec-white  { background: #fff; }
+    .sec-dark   { background: var(--darkgreen); }
+
+    /* Cards */
+    .w-card {
+      background: #fff;
+      border: 1px solid #b3fff0;
+      border-radius: 14px;
+      transition: transform .3s, box-shadow .3s, border-color .3s;
+      overflow: hidden;
+    }
+    .w-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(0,255,204,0.16);
+      border-color: var(--mint);
+    }
+
+    /* Glow card (dark bg) */
+    .glow-card {
+      background: rgba(0,255,204,0.05);
+      border: 1px solid rgba(0,255,204,0.18);
+      border-radius: 14px;
+      transition: all .3s;
+    }
+    .glow-card:hover {
+      border-color: var(--mint);
+      box-shadow: 0 0 28px rgba(0,255,204,0.12);
+    }
+
+    /* Badge */
+    .badge {
+      display: inline-block;
+      background: rgba(0,255,204,0.12);
+      border: 1px solid var(--mint);
+      color: var(--mint);
+      padding: 5px 16px;
+      border-radius: 20px;
+      font-size: .76rem;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    /* Step circle */
+    .step-circle {
+      width: 54px; height: 54px;
+      background: var(--mint);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--dark); font-size: 1.5rem; font-weight: 900;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 14px;
+      box-shadow: 0 4px 20px rgba(0,255,204,0.4);
+    }
+
+    /* Icon box */
+    .icon-wrap {
+      width: 52px; height: 52px;
+      background: linear-gradient(135deg, #e6fff9, #b3fff0);
+      border: 1px solid #80ffe6;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+
+    /* FAQ */
+    details > summary { list-style: none; }
+    details > summary::after { content: '+'; float: right; font-size: 1.4rem; color: var(--mint); font-weight: 900; }
+    details[open] > summary::after { content: '−'; }
+
+    /* Divider */
+    .mint-divider {
+      width: 100%; height: 3px;
+      background: linear-gradient(90deg, transparent, var(--mint), transparent);
+      box-shadow: 0 0 12px rgba(0,255,204,0.4);
+    }
+
+    /* Energy star badge */
+    .star-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(0,255,204,0.1);
+      border: 1px solid rgba(0,255,204,0.3);
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: .8rem;
+      font-weight: 700;
+      color: var(--mint);
+      margin: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav style="background:rgba(2,15,13,0.97);" class="fixed w-full z-50 backdrop-blur-md shadow-xl border-b border-white border-opacity-5">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3">
+        <div style="width:40px;height:40px;background:var(--mint);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--dark)" stroke-width="2.5">
+            <rect x="2" y="3" width="20" height="18" rx="2"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <line x1="12" y1="3" x2="12" y2="21"/>
+          </svg>
+        </div>
+        <span style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:800;line-height:1.2;color:#fff;">
+          Deluxe Windows & Doors<br><span style="color:var(--mint);font-size:.82rem;font-weight:700;">Garfield, NJ </span>
+        </span>
+      </a>
+
+      <!-- Links -->
+      <div class="space-x-5 hidden md:flex text-sm text-gray-300" style="font-family:'Playfair Display',serif;font-size:.85rem;font-weight:700;">
+        <a href="#why"      class="nl hover:text-white uppercase">Why Us</a>
+        <a href="#process"  class="nl hover:text-white uppercase">Process</a>
+        <a href="#services" class="nl hover:text-white uppercase">Services</a>
+        <a href="#features" class="nl hover:text-white uppercase">Features</a>
+        <a href="#faqs"     class="nl hover:text-white uppercase">FAQs</a>
+        <a href="#contact"  class="nl hover:text-white uppercase">Contact</a>
+      </div>
+
+      <a href="tel:+19733407667" class="btn-mint text-sm hidden md:inline-block">📞 Call Now</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero-bg h-screen flex items-center justify-center text-center">
+    <div class="max-w-4xl mx-auto px-6 fade-up">
+      <div class="badge" style="background:rgba(0,255,204,0.15);border-color:var(--mint);color:var(--mint);">
+        📍 Garfield, NJ 07026 — North Jersey's #1 Window &amp; Door Provider
+      </div>
+      <h1 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight" style="text-shadow:0 4px 28px rgba(0,0,0,0.7);">
+        Premium Window &amp; Door Installation by <span style="color:var(--mint);">Deluxe Windows NJ</span>
+      </h1>
+      <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed" style="color:#b3fff0;">
+        Over 250,000 windows installed. Energy Star rated vinyl, wood &amp; aluminum windows. Residential &amp; commercial. Fast, neat, one-day installations — Garfield, Bergen County &amp; all of NJ.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="tel:+19733407667" class="btn-mint text-lg">📞 (973) 340-7667</a>
+        <a href="http://deluxewindows-nj.com" target="_blank" class="btn-outline-white text-lg">🌐 Visit Our Website</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="mint-divider"></div>
+
+  <!-- ===== WHY US ===== -->
+  <section id="why" class="py-20 sec-white">
+    <div class="container mx-auto px-6 text-center max-w-4xl">
+      <div class="mint-rule"></div>
+      <h2 class="text-3xl md:text-4xl font-black mb-6" style="color:var(--darkgreen);">Why Choose Deluxe Windows &amp; Doors NJ</h2>
+      <p class="leading-relaxed mb-6 text-lg text-gray-600">
+        <strong>Deluxe Windows &amp; Doors</strong> is a leading provider of premium window replacement and installation services in Northern New Jersey. We use only the highest quality materials, selecting windows from top US manufacturers — all <strong>Energy Star rated</strong> to keep your home comfortable year-round while reducing heating and cooling expenses.
+      </p>
+      <p class="leading-relaxed text-lg text-gray-600 mb-8">
+        We've installed over <strong>a quarter of a million windows</strong> in the last 15 years. Whether you're a homeowner seeking a minor upgrade or a builder constructing a large subdivision, we're pleased to assist you in making the best possible decision — all at a very fair and reasonable price. Check out our numerous 5-star reviews on Google, Yelp, and HomeAdvisor.
+      </p>
+      <!-- Energy star pills -->
+      <div class="flex flex-wrap justify-center gap-2">
+        <span class="star-pill" style="color:var(--mint-dim);">⭐ Energy Star Rated</span>
+        <span class="star-pill" style="color:var(--mint-dim);">🇺🇸 American Made</span>
+        <span class="star-pill" style="color:var(--mint-dim);">✅ 250,000+ Windows Installed</span>
+        <span class="star-pill" style="color:var(--mint-dim);">🏆 5-Star Rated</span>
+        <span class="star-pill" style="color:var(--mint-dim);">⚡ Same-Day Installation</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section id="process" class="py-20 sec-pale">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <div class="text-center mb-14">
+        <div class="mint-rule"></div>
+        <h2 class="text-3xl md:text-4xl font-black" style="color:var(--darkgreen);">How Deluxe Windows &amp; Doors NJ Works</h2>
+      </div>
+
+      <div class="space-y-16">
+
+        <!-- Step 1 -->
+        <div class="md:flex items-center gap-12">
+          <div class="md:w-1/2 mb-8 md:mb-0 rounded-2xl overflow-hidden shadow-2xl" style="border:3px solid var(--mint-mid);">
+            <img src="https://deluxewindows-nj.com/wp-content/uploads/2016/05/home-banner-1.jpg"
+                 onerror="this.src='https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80'"
+                 alt="Deluxe Windows NJ Showroom" class="w-full h-72 object-cover"/>
+          </div>
+          <div class="md:w-1/2">
+            
+            <h3 class="text-2xl font-black mb-3" style="color:var(--darkgreen);">Visit Our Showroom or Get a Free Quote</h3>
+            <p class="text-gray-600 leading-relaxed">Visit our Garfield showroom to see our complete line of premium windows and doors, or call us for a free in-home consultation. Our knowledgeable team walks you through every option — vinyl, wood, aluminum, Energy Star windows, and more — to find the perfect fit for your property and budget.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="md:flex items-center gap-12 flex-row-reverse">
+          <div class="md:w-1/2 mb-8 md:mb-0 rounded-2xl overflow-hidden shadow-2xl" style="border:3px solid var(--mint-mid);">
+            <img src="https://deluxewindows-nj.com/wp-content/uploads/2016/05/casement.jpg"
+                 onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80'"
+                 alt="Casement Windows NJ" class="w-full h-72 object-cover"/>
+          </div>
+          <div class="md:w-1/2">
+           
+            <h3 class="text-2xl font-black mb-3" style="color:var(--darkgreen);">Choose Your Perfect Window or Door</h3>
+            <p class="text-gray-600 leading-relaxed">Select from our comprehensive range of <a href="http://deluxewindows-nj.com" style="color:var(--mint-dim);" class="underline font-bold">premium windows and doors</a> — casement, double hung, picture, tilt &amp; turn, specialty shapes, vinyl, wood, aluminum and more. We provide clear, fair pricing with no surprises, tailored to your home's specific needs.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="md:flex items-center gap-12">
+          <div class="md:w-1/2 mb-8 md:mb-0 rounded-2xl overflow-hidden shadow-2xl" style="border:3px solid var(--mint-mid);">
+            <img src="https://deluxewindows-nj.com/wp-content/uploads/2016/05/double-hung.jpg"
+                 onerror="this.src='https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80'"
+                 alt="Window Installation Bergen County NJ" class="w-full h-72 object-cover"/>
+          </div>
+          <div class="md:w-1/2">
+            
+            <h3 class="text-2xl font-black mb-3" style="color:var(--darkgreen);">Fast, Neat, Professional Installation</h3>
+            <p class="text-gray-600 leading-relaxed">Most installations are completed in a single day. Our certified team follows manufacturer instructions and best construction practices to the last detail — leaving your premises spotless. The result: a beautiful, energy-efficient window or door that will last for decades to come.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services" class="py-20 sec-white">
+    <div class="container mx-auto px-6 max-w-6xl text-center">
+      <div class="mint-rule"></div>
+      <h2 class="text-3xl md:text-4xl font-black mb-12" style="color:var(--darkgreen);">Our Window &amp; Door Services</h2>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-left">
+
+        <div class="w-card p-6">
+          <div class="icon-wrap">🪟</div>
+          <h3 class="text-lg font-black mb-2" style="color:var(--darkgreen);">Vinyl Windows</h3>
+          <p class="text-sm leading-relaxed text-gray-500">Energy-efficient vinyl windows with exceptional durability and insulation — the most popular choice for NJ homeowners.</p>
+        </div>
+
+        <div class="w-card p-6">
+          <div class="icon-wrap">🌳</div>
+          <h3 class="text-lg font-black mb-2" style="color:var(--darkgreen);">Wood Windows</h3>
+          <p class="text-sm leading-relaxed text-gray-500">Traditional and elegant wood windows that enhance the aesthetic appeal and timeless character of any NJ home.</p>
+        </div>
+
+        <div class="w-card p-6">
+          <div class="icon-wrap">🔩</div>
+          <h3 class="text-lg font-black mb-2" style="color:var(--darkgreen);">Aluminum Windows</h3>
+          <p class="text-sm leading-relaxed text-gray-500">Sleek and modern aluminum windows with high strength, low maintenance requirements, and a contemporary look.</p>
+        </div>
+
+        <div class="w-card p-6">
+          <div class="icon-wrap">🌬️</div>
+          <h3 class="text-lg font-black mb-2" style="color:var(--darkgreen);">Casement Windows</h3>
+          <p class="text-sm leading-relaxed text-gray-500">Stylish casement windows offering unobstructed views, structural integrity, and maximum ventilation.</p>
+        </div>
+
+        <div class="w-card p-6">
+          <div class="icon-wrap">🏠</div>
+          <h3 class="text-lg font-black mb-2" style="color:var(--darkgreen);">Double Hung Windows</h3>
+          <p class="text-sm leading-relaxed text-gray-500">Classic double hung windows with two operable tilt-in sashes for easy cleaning and timeless curb appeal.</p>
+        </div>
+
+        <div class="w-card p-6">
+          <div class="icon-wrap">🔄</div>
+          <h3 class="text-lg font-black mb-2" style="color:var(--darkgreen);">Tilt &amp; Turn Windows</h3>
+          <p class="text-sm leading-relaxed text-gray-500">Innovative tilt &amp; turn windows that tilt inward for ventilation and swing in for easy cleaning — European-style elegance.</p>
+        </div>
+
+        <div class="w-card p-6">
+          <div class="icon-wrap">🖼️</div>
+          <h3 class="text-lg font-black mb-2" style="color:var(--darkgreen);">Picture Windows</h3>
+          <p class="text-sm leading-relaxed text-gray-500">Fixed picture windows providing maximum viewing area, energy savings, and a dramatic design statement.</p>
+        </div>
+
+        <div class="w-card p-6">
+          <div class="icon-wrap">⭐</div>
+          <h3 class="text-lg font-black mb-2" style="color:var(--darkgreen);">Specialty Shape Windows</h3>
+          <p class="text-sm leading-relaxed text-gray-500">Half-round, circle tops, eyebrow, quarter-round, trapezoid, octagon — unique designs to realize your creative vision.</p>
+        </div>
+
+        <div class="w-card p-6">
+          <div class="icon-wrap">🚪</div>
+          <h3 class="text-lg font-black mb-2" style="color:var(--darkgreen);">Door Installation</h3>
+          <p class="text-sm leading-relaxed text-gray-500">Premium replacement door installation — entry doors, sliding doors, and more — for residential and commercial NJ properties.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== KEY FEATURES ===== -->
+  <section id="features" class="py-20" style="background:var(--darkgreen);">
+    <div class="container mx-auto px-6 text-center max-w-6xl">
+      <div class="mint-rule"></div>
+      <h2 class="text-3xl md:text-4xl font-black mb-14 text-white">Key Features of Deluxe Windows &amp; Doors NJ</h2>
+
+      <div class="grid gap-8 md:grid-cols-2">
+
+        <div class="glow-card p-7 text-left">
+          <h3 class="text-xl font-black mb-3" style="color:var(--mint);">250,000+ Windows Installed</h3>
+          <p style="color:#b3fff0;" class="leading-relaxed">
+            <a href="http://deluxewindows-nj.com" style="color:var(--mint);" class="underline font-bold">Deluxe Windows &amp; Doors NJ</a> has over 15 years of experience and has installed more than a quarter of a million windows. Our track record of excellence across Bergen County and all of New Jersey speaks for itself.
+          </p>
+        </div>
+
+        <div class="glow-card p-7 text-left">
+          <h3 class="text-xl font-black mb-3" style="color:var(--mint);">100% Energy Star Rated Windows</h3>
+          <p style="color:#b3fff0;" class="leading-relaxed">
+            Every window we install is Energy Star rated — meaning your new windows won't just look great, they'll actively reduce your heating and cooling costs while making your home more comfortable in every season.
+          </p>
+        </div>
+
+        <div class="glow-card p-7 text-left">
+          <h3 class="text-xl font-black mb-3" style="color:var(--mint);">Vinyl, Wood &amp; Aluminum Window Specialists</h3>
+          <p style="color:#b3fff0;" class="leading-relaxed">
+            We offer the full spectrum of premium window materials: vinyl for energy efficiency and durability, wood for timeless elegance, and aluminum for sleek modern strength. Our team helps you choose the right material for your <a href="http://deluxewindows-nj.com" style="color:var(--mint);" class="underline font-bold">NJ home or business</a>.
+          </p>
+        </div>
+
+        <div class="glow-card p-7 text-left">
+          <h3 class="text-xl font-black mb-3" style="color:var(--mint);">Fast, One-Day Installation</h3>
+          <p style="color:#b3fff0;" class="leading-relaxed">
+            Most of our installations are completed in a single day. We respect your time and your property — arriving on schedule, working efficiently, and leaving your home spotless when we're done. No mess, no delays.
+          </p>
+        </div>
+
+        <div class="glow-card p-7 text-left">
+          <h3 class="text-xl font-black mb-3" style="color:var(--mint);">American Made Premium Products</h3>
+          <p style="color:#b3fff0;" class="leading-relaxed">
+            Our commitment to quality begins at home. All of our windows are proudly manufactured in the USA using premium materials and meeting the highest industry standards — built to last for decades in NJ's varied climate.
+          </p>
+        </div>
+
+        <div class="glow-card p-7 text-left">
+          <h3 class="text-xl font-black mb-3" style="color:var(--mint);">Residential &amp; Commercial Window Services</h3>
+          <p style="color:#b3fff0;" class="leading-relaxed">
+            Whether you're a homeowner looking for a minor upgrade or a builder constructing a large subdivision, we're here for you. Deluxe Windows &amp; Doors NJ serves all scales of residential and commercial projects across Garfield, Bergen County, and Northern New Jersey.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- CTA Block -->
+      <div class="mt-16 rounded-2xl p-10 text-center" style="background: linear-gradient(135deg, rgba(0,255,204,0.1), rgba(0,255,204,0.03)); border: 1px solid rgba(0,255,204,0.25);">
+        <h3 class="text-2xl md:text-3xl font-black mb-5" style="color:var(--mint);">NJ's Premier Window &amp; Door Experts Near You</h3>
+        <p style="color:#b3fff0;" class="mb-2">Call <strong>Deluxe Windows &amp; Doors</strong> at <a href="tel:+19733407667" style="color:var(--mint);" class="underline font-bold">(973) 340-7667</a></p>
+        <p style="color:#b3fff0;" class="mb-2">Visit us: <a href="https://www.google.com/maps?cid=16968580202455963953" target="_blank" style="color:var(--mint);" class="underline font-bold">229 Harrison Ave, Garfield, NJ 07026</a></p>
+        <p style="color:#b3fff0;">Website: <a href="http://deluxewindows-nj.com" target="_blank" style="color:var(--mint);" class="underline font-bold">deluxewindows-nj.com</a></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FAQs ===== -->
+  <section id="faqs" class="py-20 sec-white">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="text-center mb-12">
+        <div class="mint-rule"></div>
+        <h2 class="text-3xl md:text-4xl font-black" style="color:var(--darkgreen);">FAQs: Deluxe Windows &amp; Doors NJ</h2>
+      </div>
+      <div class="space-y-4">
+
+        <details class="p-5 rounded-xl sec-pale border" style="border-color:var(--mint-mid);">
+          <summary class="cursor-pointer font-bold" style="color:var(--darkgreen);">1. What services does Deluxe Windows &amp; Doors NJ offer?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">We offer premium window replacement and installation services for residential and commercial properties throughout Northern New Jersey. Our range includes vinyl, wood, and aluminum windows, plus casement, double hung, picture, tilt &amp; turn, specialty shape windows, and door installation across Bergen County and all of NJ.</p>
+        </details>
+
+        <details class="p-5 rounded-xl sec-pale border" style="border-color:var(--mint-mid);">
+          <summary class="cursor-pointer font-bold" style="color:var(--darkgreen);">2. Are your windows Energy Star rated?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">Yes — every single window we install is Energy Star rated. This means your new windows will help keep your home comfortable year-round while actively reducing your heating and cooling costs. We only select windows from top US manufacturers who meet Energy Star requirements.</p>
+        </details>
+
+        <details class="p-5 rounded-xl sec-pale border" style="border-color:var(--mint-mid);">
+          <summary class="cursor-pointer font-bold" style="color:var(--darkgreen);">3. What is the difference between vinyl, wood, and aluminum windows?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">Vinyl windows offer exceptional energy efficiency, durability, and low maintenance — ideal for most NJ homes. Wood windows provide traditional elegance and a classic aesthetic. Aluminum windows are sleek, modern, and strong with minimal maintenance requirements. Our team will help you choose based on your home's style, budget, and performance goals.</p>
+        </details>
+
+        <details class="p-5 rounded-xl sec-pale border" style="border-color:var(--mint-mid);">
+          <summary class="cursor-pointer font-bold" style="color:var(--darkgreen);">4. How long does a window installation take?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">Most of our window installations are completed in a single day. We arrive on schedule, work efficiently, and leave your home spotless. Larger commercial or specialty projects may take additional time, and we always provide a clear timeline before work begins.</p>
+        </details>
+
+        <details class="p-5 rounded-xl sec-pale border" style="border-color:var(--mint-mid);">
+          <summary class="cursor-pointer font-bold" style="color:var(--darkgreen);">5. Do you install doors as well as windows?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">Yes! In addition to our comprehensive window installation services, Deluxe Windows &amp; Doors NJ also provides premium door installation services for residential and commercial properties. Contact us to learn more about our full door product range.</p>
+        </details>
+
+        <details class="p-5 rounded-xl sec-pale border" style="border-color:var(--mint-mid);">
+          <summary class="cursor-pointer font-bold" style="color:var(--darkgreen);">6. How do I get a free quote from Deluxe Windows &amp; Doors NJ?</summary>
+          <p class="mt-3 text-gray-600 leading-relaxed">Call us at <a href="tel:+19733407667" style="color:var(--mint-dim);" class="underline font-bold">(973) 340-7667</a> or visit <a href="http://deluxewindows-nj.com" style="color:var(--mint-dim);" class="underline font-bold">deluxewindows-nj.com</a>. You can also visit our showroom at 229 Harrison Ave, Garfield, NJ. We're open Monday–Friday 10am–6pm and Saturday 10am–3pm. Our friendly team is ready to help you find the perfect windows for your home.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / CTA ===== -->
+  <section id="contact" class="py-20" style="background: linear-gradient(135deg, #00ffcc 0%, #00997a 100%);">
+    <div class="text-center px-6">
+      <h2 class="text-3xl md:text-4xl font-black mb-4 text-white" style="color:var(--darkgreen);">Upgrade Your NJ Home with Premium Windows &amp; Doors!</h2>
+      <p class="mb-8 text-lg max-w-xl mx-auto leading-relaxed" style="color:var(--darkgreen);opacity:.85;">Energy Star rated, American made, 250,000+ windows installed — Deluxe Windows &amp; Doors is Bergen County's trusted choice.</p>
+      <div class="flex flex-wrap gap-4 justify-center mb-14">
+        <a href="tel:+19733407667" class="btn-dark text-lg px-8 py-4 rounded-xl">📞 (973) 340-7667</a>
+        <a href="http://deluxewindows-nj.com" target="_blank" class="px-8 py-4 rounded-xl text-lg font-black transition hover:opacity-80" style="border:2px solid var(--darkgreen);color:var(--darkgreen);font-family:'Playfair Display',serif;">🌐 Visit Website</a>
+      </div>
+
+      <!-- Map -->
+      <div class="flex justify-center">
+        <div class="rounded-2xl overflow-hidden shadow-2xl" style="max-width:820px;width:100%;border:3px solid rgba(2,15,13,0.25);">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d24105.0!2d-74.1059!3d40.8979!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2fa4f16e7fde7%3A0xeb97c4df18ee0731!2s229%20Harrison%20Ave%2C%20Garfield%2C%20NJ%2007026!5e0!3m2!1sen!2sus!4v1717000000004"
+            width="100%"
+            height="400"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-7 text-center text-sm" style="background:var(--dark);color:#1a5245;">
+    &copy; <span id="year"></span> Deluxe Windows &amp; Doors NJ |
+    <a href="http://deluxewindows-nj.com" target="_blank" style="color:var(--mint);" class="hover:underline">deluxewindows-nj.com</a><br/>
+    <span style="color:#0d3328;">229 Harrison Ave, Garfield, NJ 07026 &nbsp;|&nbsp; Mon–Fri 10am–6pm &nbsp;|&nbsp; Sat 10am–3pm</span><br/>
+    <span style="font-size:.75rem;color:#061f17;">NJ License # 13VH08941500 &nbsp;|&nbsp; Deluxe Windows of Bergen County Home Improvement</span>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
